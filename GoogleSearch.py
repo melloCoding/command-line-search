@@ -1,6 +1,7 @@
 import webbrowser, os, sys
 import time
 
+#asci art text Command to search
 print('   ******                                                           **')
 time.sleep(0.1)
 print(' **////**                                                         /**')
@@ -17,10 +18,8 @@ print(' //****** //******  *** /** /** *** /** /**//******** ***  /**//******')
 time.sleep(0.1)
 print('  //////   //////  ///  //  // ///  //  //  //////// ///   //  ////// ')
 time.sleep(0.1)
-
 print("")
 print("")
-
 print(' ******  ******          ')
 time.sleep(0.1)
 print('///**/  **////**           ')
@@ -33,10 +32,8 @@ print('  //** //******                            ')
 time.sleep(0.1)
 print('   //   //////                  ')
 time.sleep(0.1)
-
 print("")
 print("")
-
 print('********                                  **              ')
 time.sleep(0.1)
 print(' **//////                                  /**           ')
@@ -54,28 +51,16 @@ time.sleep(0.1)
 print('////////   //////  //////// ///     /////  //   // ')
 time.sleep(0.1)
 
-urlOrNo = input('Url or Search:')
+urlOrNo = input('Url or Search:') #get the user input for if they want to do a search or go to a domain
 
-urlOrNoCap = urlOrNo.upper()
+urlOrNoCap = urlOrNo.upper() #set urlOrNo to be all capitalized
 
 if urlOrNoCap == 'URL':
-    search = input('URL:')
-    url = 'https://{}'.format(search)
-
-    
+    search = input('URL:') #get the user input for a url
+    url = 'https://{}'.format(search) #set url equal to the search variable
 if urlOrNoCap == 'SEARCH':
-    search = input("Google Search:")
-    url = "https://www.google.com/search?q={}".format(search)
+    search = input("Google Search:") #get the user input for a google search
+    url = "https://www.google.com/search?q={}".format(search) #format the url for a normal google search
 
 
-#print("To use this tool simply type what you want to search below")
-
-#search = input("Google Search:")
-
-
-#url = "https://www.google.com/search?q={}".format(search)
-
-chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-
-#chrome_path = '/usr/lib/chromium-browser/chromium-browser'
-webbrowser.get(chrome_path).open(url)
+webbrowser.open(url) #Open the default browser with the url
