@@ -1,8 +1,4 @@
 # command-line-search
-```json
-   ONLY WORKS ON WINDOWS
-   Also requires python to be installed.
-```
 
 This is a simple command line tool that allows you to put a url or google search into the command line and it will open google chrome and go to a url or do a google search.
 
